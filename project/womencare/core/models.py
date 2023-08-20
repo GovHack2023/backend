@@ -6,3 +6,6 @@ class React(models.Model):
     sex = models.CharField(max_length=30, blank=True, null=True)
     averageIncome = models.IntegerField(blank=True, null=True)
     averageSuper = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        db_table = "core_react"
