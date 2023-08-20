@@ -1,4 +1,4 @@
-runtime: python39
+runtime: python3
 instance_class: F1
 automatic_scaling:
   target_cpu_utilization: 0.65
