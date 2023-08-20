@@ -26,14 +26,14 @@ def womenCare(request):
 def genderIncome(request):
     dataSend = []
     allData = GenderIncomeStats.objects.all().values(
-        "sex4", "State/Territory1", "Taxable income or loss $"
+        "Sex", "State", "TaxableIncomeRange", "TaxableIncome"
     )
     for index, oneData in enumerate(allData):
         userInfo = {
             "id": index,
-            "sex": oneData["sex4"],
-            "state": oneData["State/Territory1"],
-            "taxable income": oneData["Taxable income or loss $"],
+            "sex": oneData["Sex"],
+            "state": oneData["State"],
+            "TaxableIncomeRange": oneData["TaxableIncome"],
         }
         dataSend.append(userInfo)
     response = JsonResponse(status=200, data={"data": dataSend})
