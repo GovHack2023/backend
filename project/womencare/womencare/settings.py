@@ -151,4 +151,4 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
     "x-requested-with",
 ]
-ALLOWED_HOSTS = ["10.12.127.137", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["10.12.127.137", "localhost", "127.0.0.1", "10.192.0.2"]
